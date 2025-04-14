@@ -7,7 +7,7 @@ on:
 
 env:
   IMG_REGISTRY_HOST: quay.io
-  IMG_REGISTRY_ORG: kuadrant
+  IMG_REGISTRY_ORG: trepel
   IMG_NAME: testsuite
   IMG_TAGS: unstable ${{ github.sha }}
 
