@@ -14,7 +14,7 @@ on:
 
 env:
   IMG_REGISTRY_HOST: quay.io
-  IMG_REGISTRY_ORG: kuadrant
+  IMG_REGISTRY_ORG: trepel
   IMG_NAME: testsuite
   # ternary operation to choose tag input based on how this workflow was triggered
   IMG_TAGS: latest ${{ github.event_name == 'workflow_dispatch' && github.event.inputs.version_tag || github.ref_name }}
