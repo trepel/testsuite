@@ -61,11 +61,11 @@ kube-burner destroy --uuid [:uuid]
 If cleanup is skipped then quick sanity check that everything works can be done:
 
 ```
-curl -k -s -o /dev/null -w "%{http_code}\n" -H "Authorization: APIKEY iamalice" https://api.scale-test-gw1-l1-i0.aws.kua.app-services-dev.net/get # expected result: 200
+curl -k -s -o /dev/null -w "%{http_code}\n" -H "Authorization: APIKEY iamalice" https://api.scale-test-gw1-l1-i0.aws.kuadrant-qe.hcpapps.net.net/get # expected result: 200
 
-curl -k -s -o /dev/null -w "%{http_code}\n" -H "Authorization: APIKEY iambob" https://api.scale-test-gw1-l1-i0.aws.kua.app-services-dev.net/get # expected result: 200
+curl -k -s -o /dev/null -w "%{http_code}\n" -H "Authorization: APIKEY iambob" https://api.scale-test-gw1-l1-i0.aws.kuadrant-qe.hcpapps.net.net/get # expected result: 200
 
-curl -k -s -o /dev/null -w "%{http_code}\n" -H "Authorization: APIKEY iamX" https://api.scale-test-gw1-l1-i0.aws.kua.app-services-dev.net/get # expected result: 401
+curl -k -s -o /dev/null -w "%{http_code}\n" -H "Authorization: APIKEY iamX" https://api.scale-test-gw1-l1-i0.aws.kuadrant-qe.hcpapps.net.net/get # expected result: 401
 ```
 
 Based on limits configured in RateLimitPolicy CRs these commands can be repeated until `HTTP 429 Too Many Requests` is returned. Omit `-k` if valid certificates are used.
